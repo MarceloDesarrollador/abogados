@@ -1,0 +1,348 @@
+@charset "utf-8";
+
+
+/* ### general ### */
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+html, body { font-family: 'Open Sans', sans-serif; font-size: 16px; color: #3c3c3c; }
+input, select, textarea { font-family: 'Open Sans', sans-serif; font-size: 16px; color: #3c3c3c; }
+body { background: #fff; }
+img { border: 0px; display: block; height: auto; max-width: 100%; }
+ul, li { list-style: none; }
+:focus { outline: none; }
+a, input { outline: none; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+ color:    #223555;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+ color:    #223555;
+ opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+ color:    #223555;
+ opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color:    #223555;
+}
+/* ### wrapper ### */
+#wrapper { position: relative; display: block; width: 100%; min-height: 100%; }
+/* ### global classes ### */
+.clear { clear: both; visibility: hidden; line-height: 0; height: 0; }
+.center { margin: 0 auto; max-width: 1160px; position: relative; width: 100%; }
+.mid { margin: 0 auto; max-width: 1260px; width: 100%; }
+/* ### header container ### */
+.headerSec{ width: 100%; height: 92px; position: fixed; top: 0; float: left; left: 0; right: 0; background: url(../images/header-bg.png) left top repeat-x;z-index: 999; padding:20px 20px 0;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s; }
+.logo { float:left; width:20%; transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s; }
+.logo img { transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s; height:54px; width:175px; }
+.logo a{background:url(../images/Logo-1.png) left center no-repeat;display: inline-block;height: 54px; width: 200px; background-position:0 -3px;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+.headerSec.sticky .logo a{background-position:0 -57px;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+.headerSec.sticky{transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;height: 70px;padding: 10px 20px 0; background:#fff; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);}
+.headerSec.sticky .menuBox{ margin-top: 15px;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+.headerSec.sticky .menuBox .menu li a{color:#000;}
+.headerSec.sticky .menuBox .menu li a.active, .headerSec.sticky .menuBox .menu li a:hover:{ color:#40C155;}
+.headerSec.sticky .workingSec li p{color:#000;}
+.headerSec.sticky .workingSec li h6{color:#000;}
+.headerSec.sticky .workingSec li a{ color:#000;}
+
+/* ### menu box ### */		
+.menuBox { float: left; width: auto;  margin-top: 25px;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+.menuBox .menu { float: right; width: auto; }
+.menuBox .menu li { float: left; margin: 0 15px; position: relative; list-style: none;}
+.menuBox .menu li a { color: #fff; text-transform: uppercase; float: left; text-decoration: none; font-size: 16px; font-weight: normal;}
+.menu li a.active, .menu li a:hover:{ color:#40C155;}
+.menuBox .menu_icon { background: url(../images/menu_icon.png) no-repeat right center; padding: 0 17px 0 0; }
+.menuBox .menu li ul { background: #002e5d none repeat scroll 0 0; border: 1px solid #fff; left: 0; position: absolute; top: 39px; width: 170px; z-index: 2; display: none; }
+.menuBox .menu li:hover ul { display: block; }
+.submenu li { background: #002e5d; color: #fff; margin-left: 0; width: 100%; padding: 0; }
+.submenu li a { color: #fff; font-size: 16px; margin: 7px 9px 17px 10px; text-transform: none; font-weight: 300; }
+.menu li.active .submenu li a { color: #fff; }
+.menu li.active .submenu li a:hover { color: #e14b18; }
+#dedicated-mobile { display: none; }
+.menuBox .menu li a.active, .menuBox .menu li:hover a {color:#40c155 !important; }
+.workingSec{float:right; width:36%;}
+.workingSec ul{float:left; width:100%; list-style:none;}
+.workingSec li{float:left; width:48%; background:url(../images/phone-call2.png) left center no-repeat; padding:0 0px 0 50px; margin: 0 0 0 10px; height:45px; background-position:0 5px;}
+.headerSec.sticky .workingSec li{background-position:0 -36px;}
+.workingSec li:first-child{border-right:1px solid #fff; margin:0; background:url(../images/clock2.png) left center no-repeat;height:43px; background-position:0 5px;}
+.headerSec.sticky .workingSec li:first-child{background-position:0 -37px;}
+.workingSec li a{ font-size:22px; font-weight:500; color:#fff; text-decoration:none;}
+.workingSec li a:hover{text-decoration:underline;}
+h6{ font-size:22px; font-weight:500; color:#fff;}
+.workingSec li p{ font-size:12px; font-weight:normal; color:#fff;}
+
+
+
+/* ### Banner Text ### */
+.bannerSec{float:left; width:100%;}
+.banner-bg {float: left; position: relative; width: 100%;}
+.banner-bg img{width:100%; min-height:900px;}
+.bannerText { top: 50%; ; transform: translateX(-50%); position: absolute; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);text-align: center;}
+.bannerMid { margin: 0 auto; max-width: 650px; width: 100%; }
+.bannerbox { float: left; width: 100%;margin: 67px 0 0; background:url(../images/banner-top-border.png) top center no-repeat;}
+.bannerbox h1 { color: #fff; font-size: 60px;  font-weight: bold; line-height: 72px; border-bottom:1px solid #fff; padding:129px 0 64px;letter-spacing: 1px;}
+.bannerbox p { font-size: 14px; font-weight: bold; color: #fff; margin: 45px 0; }
+.bannerbox a{ font-size:18px; font-weight:normal; color:#fff; text-decoration:none; margin:0 0 0 13px;}
+.btn{border:2px solid #fff;font-size:18px; font-weight:normal; color:#fff; text-decoration:none; padding:13px 49px;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;display: inline-block;}
+.btn:hover{ background:#223555;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+
+/* ### Practice Areas  ### */
+.practicesSec{float: left; width:100%; padding:35px 0 0;}
+h3{color:#363e55; font-size:36px; font-weight:bold;font-family: 'Lora', serif;}
+.practicesSec h3{float:left; width:100%; text-align:center;line-height: 120px; background:url(../images/title-border.png) bottom center no-repeat;}
+.practicesSec ul{ list-style:none; float:left; width:100%;margin: 36px 0 0;}
+.practicesSec li{float:left; width:25%; padding:0 15px;margin:0 0 68px;}
+.areaSec{float:left; width:100%; background:#f4f5f6; border:5px solid #223555;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s; min-height:210px; text-align:center; border-radius: 5px;}
+.areaSec:hover{transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;background:#223555;}
+.areaSec p {float: left; margin:27px 0 0; width: 100%;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+.areaSec:hover p{color:#fff; font-weight: bold;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+p{color:#223555; font-size:24px; font-weight:normal;}
+.areaSec i{font-size:0; display:inline-block;}
+.list1{ background:url(../images/Bank-And-Financial.png) center center no-repeat; width:70px; height:60px;background-position:0 0;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+.areaSec:hover .list1{background-position: 0 -60px;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+
+.list2{ background:url(../images/Car-Accident.png) center center no-repeat; width:70px; height:60px;background-position:0 0;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+.areaSec:hover .list2{background-position: 0 -60px;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+
+.list3{ background:url(../images/Personal-Injury.png) center center no-repeat; width:70px; height:60px;background-position:0 0;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+.areaSec:hover .list3{background-position: 0 -58px;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+
+.list4{ background:url(../images/Family-Law.png) center center no-repeat; width:70px; height:60px;background-position:0 0;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+.areaSec:hover .list4{background-position: 0 -58px;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+
+.list5{ background:url(../images/Capital-market.png) center center no-repeat; width:70px; height:60px;background-position:0 0;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+.areaSec:hover .list5{background-position: 0 -58px;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+
+.list6{ background:url(../images/Employment-Law.png) center center no-repeat; width:70px; height:60px;background-position:0 0;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+.areaSec:hover .list6{background-position: 0 -54px;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+
+.list7{ background:url(../images/Corporate.png) center center no-repeat; width:70px; height:60px;background-position:0 0;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+.areaSec:hover .list7{background-position: 0 -58px;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+
+.list8{ background:url(../images/Dispute-Resolution.png) center center no-repeat; width:70px; height:60px;background-position:0 0;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+.areaSec:hover .list8{background-position: 0 -58px;transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s;}
+
+/* ### Meet the Lawyers  ### */
+.meetlawyersSec{float:left; width:100%; background:#f7f7f7;padding: 70px 0 30px;}
+.meetlawyersSec h3{float:left; width:100%; text-align:center;line-height: 52px; background:url(../images/title-border.png) bottom center no-repeat;padding: 0 0 29px;}
+.meetlawyersSec ul{float:left; width:100%; list-style:none;margin:40px 0 0;display: table;}
+.meetlawyersSec li{ display: table-cell; width:25%; padding:0 14px;}
+.lawyerDetail{float:left; width:100%; background:#fff;box-shadow: 2px 2px 2px #ccc;-moz-box-shadow: 2px 2px 2px #ccc;-webkit-box-shadow: 2px 2px 2px #ccc;padding: 0 0 24px;}
+.lawyerDetail h4{ color:#223555; font-weight:bold; font-size:18px; line-height:24px; text-align:center;margin:14px 0 0;}
+.lawyerDetail h5{ color:#223555; font-size:14px; font-weight:normal; line-height:24px; text-align:center;}
+.lawyerDetail p{color:#223555; font-size:14px; font-weight:normal; line-height:20px;margin:21px 0 0;padding:0 16px;}
+
+/* ### What Our Clients Say About Our Services  ### */
+.serviceSec{float:left; width:100%;padding:33px 0;}
+.serviceSec h3{float:left; width:100%; text-align:center;line-height: 120px; background:url(../images/title-border-service.png) bottom center no-repeat;}
+.serviceBox{float:left; width:100%;margin:38px 0 20px;}
+.serviceBox .vedioSec{float:left; width:50%; padding:0 47px 0 13px;}
+.serviceBox .vedioSec iframe{width:100%; border:none;height: 337px;}
+.serviceBox .vedioSec .vedioText{ background:#223555; float:left; width:100%;padding:11px 12px; margin: -5px 0 0;}
+.serviceBox .vedioSec .vedioText h5{ color:#fff; font-size:18px; font-weight:normal; line-height:20px; margin:0 0 12px;}
+.serviceBox .vedioSec .vedioText p{color:#fff; font-size:14px; font-weight:normal; line-height:20px;}
+.serviceBox .testimonialSec{float:left; width:50%;padding:0 0 0 24px;}
+.serviceBox .testimonialSec ul{ float:left; width:100%; list-style:none;}
+.serviceBox .testimonialSec li{ float:left; width:100%;margin: 16px 0 0;}
+.serviceBox .testimonialSec li:first-child{ margin:0;}
+.arthurSec{ float:left; width:100%; position:relative;}
+.arthurSec figure{float:left; width:16%; margin:26px 0 0;}
+.arthurSec .arthurDetails{float:right; width:84%; border:1px solid #656565; box-shadow: 3px 3px 3px #ccc;position: relative;}
+.arthurSec .arthurDetails::after { background:url(../images/triangle.png) no-repeat scroll left center; content: ""; height: 14px;left:-10px; position: absolute; top: 50%;width: 10px;margin-top: -7px;}
+.arthurSec .arthurDetails .arthurText{padding:10px 10px 16px 20px; float:left; width:100%;}
+.arthurSec .arthurDetails p{ color:#223555; font-size:14px; font-weight:normal; line-height:20px; background:url(../images/monial-icon.png) left top no-repeat; padding:3px 0 0 31px;}
+.arthurSec .arthurDetails h4{ color:#223555; font-size:14px; font-weight:bold; line-height:20px; padding: 10px 0 0 30px;}
+.arthurSec .arthurDetails span{ font-weight:normal;padding: 0 0 0 9px;}
+
+
+/* ### Request a Free Consultation  ### */
+.requestSec{float:left; width:100%; background:#f6f6eb;padding: 70px 0 62px;}
+.requestMid{ margin:0 auto; max-width:750px; width:100%;}
+.requestSec h3{float:left; width:100%; text-align:center;line-height: 76px; background:url(../images/title-border-request.png) bottom center no-repeat;padding: 0 0 19px;}
+.contact-form{float:left; width:100%; margin:36px 0 0;}
+.contact-form li { float: left; width: 100%; position: relative; margin:0 0 20px; }
+.width { float: left; width: 48%; position: relative; }
+.width-right { float: right; width: 48%; position: relative; }
+.contact-form input, .contact-form select{  width: 100%; padding:4px 11px; font-size: 18px; color: #223555; border: 1px solid #000; border-radius: 7px;-moz-appearance:none; /* Firefox */ -webkit-appearance:none; /* Safari and Chrome */}
+.contact-form select{ cursor: pointer; background:url(../images/select-icon.png) 98% center no-repeat #fff;padding: 3px 0 3px 7px;}
+.contact-form textarea {width: 100%; padding:4px 10px; font-size: 18px; height: 105px; color: #223555; resize: none;border: 1px solid #000; border-radius: 15px; }
+.contact-form input[type="submit"] { border: 1px solid #223555; display: inline-block; padding:2px 23px; font-weight: 400; width: auto; transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s; color: #223555; font-size: 20px; border-radius: 4px;}
+.contact-form input[type="submit"]:hover { color: #fff; background: #223555; transition: all 0.5s ease 0s; -webkit-transition: all 0.5s ease 0s; }
+.contact-form .btn { text-align: center; }
+.error {color: #FF0000;}
+
+/* ### Footer Sec  ### */
+.footer{float:left; width:100%; background:#223555; padding:20px 0;}
+.footer h4{ color:#fff; font-size:16px; font-weight:bold;text-transform: uppercase;}
+.aboutSec{float:left; width:40%;padding:0 160px 0 32px;}
+.aboutSec p{color:#fff; font-size:14px; font-weight:normal; line-height:20px;margin:31px 0 0;}
+.quickLinksSec{float:left; width:14%; margin: 13px 0 0; padding: 0 0 0 8px;}
+.quickLinksSec .menu{ float:left; width:100%; margin:14px 0 0;}
+.quickLinksSec .menu li{}
+.quickLinksSec .menu li a{ font-size:16px; color:#fff; text-decoration: none; text-transform: uppercase; line-height:28px;}
+.quickLinksSec .menu li a:hover{text-decoration:underline;}
+.social-icon{ float:right; width:32%;   margin: 12px 0 0; padding: 0 0 0 4px;}
+.social-icon form {position: relative;}
+.social-icon input[type="email"] {border: 0 none;border-radius: 5px; height: 34px; width: 325px;padding: 0 10px;}
+.social-icon input[type="submit"]{ background:url(../images/newsletter-icon.png) right center no-repeat; width:45px; height:34px; display:inline-block; font-size:0; position: absolute;right: 8px;top: 0; border:none;}
+.social-icon input {margin: 16px 0 0;}
+.social-icon a{display:inline-block;margin:22px 0 0 22px;}
+.social-icon a.facebook{ margin:0;}
+.social-icon img:hover{opacity: 0.5;}
+.copyright{ float:left; width:100%; background:#fff; padding:10px 0; text-align:center;}
+.copyright p{ color:#223555; font-size:14px; line-height:24px;}
+.scrolltop { bottom: 50px; position: fixed; right: 40px;z-index: 99;}
+.scrolltop a {background: url(../images/header-bg.png) left top repeat-x; border-radius: 5px; color: #fff; font-size: 30px; padding:0 10px 5px;display:none;text-decoration: none;}
+.scrolltop .show{display:block;}
+.gotopSec{float: left; width:100%; position:relative;}
+
+/* #Responsive Styles
+================================================== */
+@media only screen and (max-width: 1270px) {
+.center { width: 98%; }
+.menuBox .menu li a{font-size:15px;}
+.workingSec h6{font-size:18px;}
+.workingSec li a{font-size:18px;}
+.workingSec li p{font-size:10px;}
+.workingSec{margin:10px 0 0;}
+.bannerbox h1{font-size:50px;}
+
+}
+
+@media only screen and (max-width: 1150px) {
+.headerSec{ padding: 20px 0 0;}
+.mid{width: 98%;}
+.headerSec.sticky{padding: 10px 0 0;}
+.bannerbox{margin:0;}
+
+}
+@media only screen and (max-width: 1100px) {
+.menuBox .menu li{ margin:0 8px;}
+.menuBox .menu li a{font-size:14px;}
+.workingSec{width:39%;}
+.headerSec.sticky .menuBox{margin-top:20px;}
+.bannerbox h1 { font-size: 46px; line-height: 50px; padding: 100px 0 40px;}
+.areaSec p{font-size:20px;}
+.lawyerDetail p{padding:0 11px;margin: 10px 0 0;}
+.social-icon input[type="email"]{width:310px;}
+.social-icon input[type="submit"]{right:0px;}
+.banner-bg img{min-height: auto;}
+.bannerbox p{margin: 20px 0;}
+.bannerbox {margin: 80px 0 0;}
+.practicesSec{padding: 15px 0 30px;}
+.meetlawyersSec{padding: 20px 0;}
+.serviceSec{padding: 20px 0;}
+.requestSec{padding: 20px 0;}
+
+}
+@media only screen and (max-width: 1023px) {
+.logo{width:30%;}
+.workingSec {float: left; width: 54%;}
+.menuBox { display: none; }
+#dedicated-mobile { display: block; clear: both; width: 100%; margin-top: 0px; position : relative; }
+#dedicated-mobile a.trigger { color: #fff; font-family: arial; text-decoration: none; clear: both; display: block; padding: 11px 12px; position: relative; font-size: 0; }
+#dedicated-mobile a.trigger span { content: " "; background: url(../images/Mobile-Icon.png) no-repeat scroll center center transparent; display: block; height: 17px; line-height: 1; margin-top: 0; position: fixed; right: 30px; top: 40px; width: 30px; -webkit-transition: all linear 0.5s; transition: all 0.4s ease; z-index: 99; }
+.headerSec.sticky #dedicated-mobile a.trigger span { top: 30px; }
+#dedicated-mobile a.trigger.open span { background: url(../images/cross1.png) no-repeat scroll center center transparent; }
+#dedicated-mobilemenu li a:hover { color: #fff; }
+#dedicated-mobile ul#dedicated-mobilemenu { background: #223555; list-style: outside none none; margin: 0; position: absolute; top: 10px; width: 100%; z-index: 99; padding: 7px 8px; }
+.headerSec.sticky #dedicated-mobile ul#dedicated-mobilemenu{top:0;}
+#dedicated-mobilemenu ul { margin: -1px 0 10px 0; padding: 0 0 0 0; }
+#dedicated-mobilemenu li { display: block; }
+#dedicated-mobilemenu li a { display: block; padding: 8px 4px; font-size: 16px; line-height: 1; text-transform: uppercase; color : #ccc; text-decoration: none; }
+#dedicated-mobilemenu li a:hover ul { display: block; }
+#dedicated-mobilemenu .submenu { padding: 0; margin: 0; }
+#dedicated-mobilemenu .submenu li { background: none; }
+#dedicated-mobilemenu .submenu li a { margin: 0; }
+#dedicated-mobilemenu .submenu li:first-child a { border-top: 0; }
+.bannerbox h1 {font-size: 35px;line-height: 40px; padding: 80px 0 20px;}
+.bannerbox p {margin: 16px 0;}
+.btn{ padding: 13px 40px;}
+.bannerbox a{margin: 0 0 0 10px; font-size: 16px;}
+.banner-bg img { min-height: 440px;}
+.practicesSec li{margin: 40px 0 0; padding: 0 10px;}
+.areaSec{min-height: 180px;}
+.areaSec p {font-size: 15px;}
+.meetlawyersSec li{ margin: 20px 0 0; float:left; width:50%;}
+.lawyerDetail img{height:auto; width:100%;}
+.serviceBox .vedioSec{padding:0; width:100%;}
+.serviceBox .testimonialSec{width:100%;margin: 20px 0 0;padding: 0;}
+.requestMid{width:96%;}
+.aboutSec{padding: 0 40px 0 11px; width:36%;}
+.quickLinksSec{width:20%;}
+.social-icon{ width: 43%;}
+.social-icon input[type="submit"] {right: 6px;}
+
+}
+
+@media only screen and (max-width: 767px) {
+.headerSec {background: #fff;height: 70px;padding: 10px 0 0;}
+.logo a{background-position:0 -57px;}
+#dedicated-mobile a.trigger span{top:30px;}
+.workingSec h6{font-size:0;}
+.workingSec li p{font-size:0;}
+.workingSec li a{font-size:0; background:url(../images/phone-call1.png) left center no-repeat; width:37px; height:37px; display:inline-block; background-size:70% 70%;}
+.workingSec li{ background:none;margin: -18px 0 0 10px;}
+.workingSec li:first-child{border:none;background-size: 50% 50%; display:none;}
+.workingSec {float: right; width: 30%;}
+.bannerbox h1 {font-size: 27px; line-height: 30px; padding:80px 0 9px;}
+.bannerbox p{font-size:10px;}
+.bannerbox a {margin: 8px 0 0; font-size: 14px;}
+.btn{padding: 10px 20px;}
+.bannerbox { margin: 61px 0 0;}
+.banner-bg img {min-height: 340px;}
+.practicesSec li{width:50%;}
+.width{width:100%; margin:0 0 20px;}
+.width-right{width:100%;}
+h3{ font-size:20px;}
+.practicesSec h3,.meetlawyersSec h3, .serviceSec h3, .requestSec h3 {line-height: 70px;}
+.meetlawyersSec li{width:100%;}
+.aboutSec{width:100%;}
+.quickLinksSec{width:100%;  margin: 15px 0 0;}
+.social-icon{width:100%;  margin: 15px 0 0;}
+.aboutSec p{margin: 10px 0 0;}
+.quickLinksSec .menu{margin: 10px 0 0;}
+.quickLinksSec .menu li a{font-size: 13px; line-height: 20px;}
+.social-icon input[type="submit"] { right: 273px; top:0;}
+#dedicated-mobile ul#dedicated-mobilemenu{top:0px;}
+
+}
+
+@media only screen and (max-width: 639px) {
+.logo {width: 70%;}
+.workingSec li{padding:0;}
+.bannerbox p {font-size: 8px;}
+.bannerbox a {font-size:12px;}
+.btn{padding: 6px 10px;}
+.contact-form{margin:20px 0 0;}
+.contact-form li,.width{margin:0 0 10px;}
+.social-icon input[type="submit"]{right:150px;}
+.bannerbox h1{ font-size: 21px; line-height: 25px;}
+}
+
+@media only screen and (max-width: 479px){
+#dedicated-mobile ul#dedicated-mobilemenu{top:-3px;}
+.bannerText{ float:left; width:90%;}
+.bannerbox h1{font-size:29px;line-height: 30px;}
+.bannerbox p {font-size: 10px;}
+.practicesSec li{width:100%;}
+.workingSec li{ margin: -18px 0 0;}
+.serviceSec h3{font-size:15px;}
+.serviceBox .vedioSec .vedioText h5{font-size:14px;}
+.serviceBox .vedioSec .vedioText p{font-size:12px;line-height: 16px;}
+p{line-height: 16px; font-size:12px;}
+.arthurSec .arthurDetails p{font-size:12px;line-height: 16px;}
+.arthurSec .arthurDetails h4{font-size:12px;}
+.arthurSec .arthurDetails{width:75%;}
+.arthurSec figure{width:25%;}
+.social-icon input[type="email"]{width:280px;}
+.social-icon input[type="submit"] {right: 28px;}
+.lawyerDetail h4{font-size:14px; line-height: 16px;}
+.lawyerDetail h5{font-size:12px; line-height:20px;}
+.lawyerDetail p{font-size:12px; line-height:16px;}
+.practicesSec ul{margin:0}
+}
+
+@media only screen and (max-width: 359px){
+.bannerbox h1{font-size:25px;}
+}
